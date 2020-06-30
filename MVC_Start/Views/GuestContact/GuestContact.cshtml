@@ -1,0 +1,19 @@
+﻿@model MVC_Start.Models.GuestContact
+
+@{
+    ViewData["Title"] = "Contacts";
+    //Layout = null;
+}
+
+<h1>Title: @ViewData["title"]</h1>
+
+<p>Name: @Model.Name</p>
+<p>Email: @Model.Email</p>
+<p>Phone Number: @Model.Phone</p>
+
+<form asp-controller="GuestContact" asp-action="GuestContact" method="post">
+    <p>Name: <input asp-for="Name" name="Name" /></p>
+    <p>Email: <input asp-for="Email" name="Email" /></p>
+    <p>Phone Number: <input asp-for="Phone" name="Phone" /></p>
+    <button type="submit">Submit</button>
+</form>
