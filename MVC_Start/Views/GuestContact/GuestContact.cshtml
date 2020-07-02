@@ -1,7 +1,7 @@
 ﻿@model MVC_Start.Models.GuestContact
 
 @{
-    ViewData["Title"] = "Contacts";
+    ViewData["Title"] = "Guest Contact";
     //Layout = null;
 }
 
@@ -12,8 +12,10 @@
 <p>Phone Number: @Model.Phone</p>
 
 <form asp-controller="GuestContact" asp-action="GuestContact" method="post">
-    <p>Name: <input asp-for="Name" name="Name" /></p>
-    <p>Email: <input asp-for="Email" name="Email" /></p>
-    <p>Phone Number: <input asp-for="Phone" name="Phone" /></p>
+    <p>Name: <input asp-for="Name" /></p>
+    <p>Email: <input asp-for="Email"  /></p>
+    <p>Phone Number: <input asp-for="Phone" /></p>
     <button type="submit">Submit</button>
 </form>
+
+<a asp-controller="Home" asp-action="Index" asp-route-id="12">Home Page</a>
